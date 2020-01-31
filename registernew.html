@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ticket Registration page</title>
+	<script type="text/javascript" src="./validationnew.js"></script>
+ <style>
+    #table1{
+	 margin-left:500px;
+	} 
+	#effect{
+      margin-left:600px
+	}
+	#current{
+	margin-left:500px;
+	display:none;
+	}
+ </style>
+</head>
+<body  style="background-color:rgb(164,227,185)">
+  <CENTER>
+	<h2><I>TICKET RESERVATION PAGE</I></h2>
+  </CENTER>
+  <BR /><BR />
+  <form id ="myForm" onsubmit="pwdValidate()">
+    <table id="table1">
+     <tr >
+	  <td align="center" colspan="2"><input  type="image" src="./images.jpg" alt="train" height="100" width="100"></td>
+	 </tr>
+     <tr>
+	  <td>NAME</td><td><input id="NAME" type="text" name="NAME"required></td>
+	 </tr>
+	 <tr>
+	  <td>EMAIL</td><td><input id="EMAIL" type="email" name="EMAIL" placeholder="abc@gmail.com"></td>
+	 </tr>
+	 <tr>
+	  <td>PASSWORD</td><td><input type="password" name="PASSWORD" id="myPwd">
+	  <input type="checkbox" onclick="pwdChange()">show password</td>
+	 </tr>
+	 <tr>
+	  <td>MOBILE NUMBER</td><td><input type="tel" id="MOBILENUMBER"  name="MOBILENUMBER" pattern="[0-9]{10}"></td>
+	 </tr>
+	 <tr>
+	  <td>GENDER</td>
+	  <td>
+	  <input type="radio" name="GENDER" value="male">Male
+	  <input type="radio" name="GENDER" value="female">Female
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>AGE</td><td><input type="number" id="AGE" name="AGE" min="1" step=1></td>
+	 </tr>
+	 <tr>
+	  <td>DATE OF JOURNEY</td><td><input type="date" id="DATEOFJOURNEY" name="DATEOFJOURNEY"></td>
+	 </tr>
+	 <tr>
+	  <td>TRAVEL AMENITIES</td>
+	  <td>
+	  <input type="checkbox" name="TRAVELAMENITIES" value="breakfast">BREAKFAST
+	  <input type="checkbox" name="TRAVELAMENITIES" value="lunch">LUNCH
+	  <input type="checkbox" name="TRAVELAMENITIES" value="dinner">DINNER</td></tr>
+	 <tr>
+	  <td>TRAVEL TIME</td><td><input type="time" id="TRAVELTIME" "name="TRAVEL TIME"></td>
+	 </tr>
+	 <tr>
+	  <td>SELECT FAVORITE COLOUR</td><td><input type="color" id="COLOUR" name="COLOUR"></td>
+	 </tr>
+	 <tr>
+	  <td>UPLOAD ID PROOF</td>
+	  <td><input type="file" id="PROOF" name="PROOF"></td>
+	 </tr>
+	</table><br /><br />
+	<div id="effect">
+	 <tr><td><input type="button" onclick="dataDisplay()" value="submit">
+	 <input type="reset" value="reset"></td></tr>
+	</div>
+  </form>
+  <table border="3" width="400" id="current">
+	<tr>
+	  <td>NAME </td>
+	  <td id="NAME1"></td>
+	</tr>
+	<tr>
+	  <td>EMAIL </td>
+	  <td id="EMAIL1"></td>
+	</tr>
+	 <tr> 
+	  <td>MOBILE NUMBER </td>
+	  <td id="MOBILENUMBER1"></td>
+	 </tr>
+	<tr>
+	  <td>GENDER </td>
+	  <td id="GENDER1"></td>
+	</tr>
+	<tr>
+	  <td>AGE </td><td id="AGE1"></td></tr>
+	 <tr>
+	  <td>DATE OF JOURNEY </td><td id="DATEOFJOURNEY1"></td></tr>
+	 <tr>
+	  <td>TRAVEL AMENITIES </td><td id="TRAVELAMENITIES1"></td></tr>
+	 <tr>
+	  <td>TRAVEL TIME </td><td id="TRAVELTIME1"></td></tr>
+	 <tr>
+	  <td>SELECT FAVORITE COLOUR </td><td id="FAVORITECOLOUR1"></td></tr>
+	 <tr>
+	 <td>UPLOAD ID PROOF </td> <td id="PROOF1"></td></tr>	
+  </table>
+  <p id="demo">
+  </p>
+  <p id="demo1"></p>
+</body>
+</html>
