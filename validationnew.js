@@ -12,19 +12,19 @@ function pwdChange()
 }
 function pwdValidate()
 {
-  var str = document.getElementById("myPwd").innerHTML;
-  var patt ="(?=.*[0-9])";
-  if( str.match(patt))
+  var str = document.getElementById("myPwd").value;
+  var patt =new RegExp("((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})");
+  if( patt.test(str))
   {
-	  console.log("correct");
-	  alert("correct");}
-  else {alert("wrong");}
+	  window.alert("correct password");
+	  dataDisplay();
+	  
+  }
+  else 
+  {
+      window.alert("wrong password");
+  }
   
-}
-function displayHide()
-{
-   var display=document.getElementById("display");
-   display.style.display="none";
 }
 function dataDisplay()
 {
